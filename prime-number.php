@@ -1,5 +1,7 @@
 <?php
 
+// Write a program to print all prime numbers between 1 and 20.
+
 for($num = 2; $num <= 20; $num++){
 	
     $isPrime = true;
@@ -17,5 +19,7 @@ for($num = 2; $num <= 20; $num++){
     }
     
 }
+
+// 
 
 
