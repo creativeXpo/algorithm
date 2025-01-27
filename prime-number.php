@@ -1,6 +1,6 @@
 <?php
 
-// Write a program to print all prime numbers between 1 and 20.
+// 1. Write a program to print all prime numbers between 1 and 20.
 
 for ($num = 2; $num <= 20; $num++) {
     $isPrime = true;
@@ -15,7 +15,7 @@ for ($num = 2; $num <= 20; $num++) {
     }
 }
 
-// Write a program to check if a number is prime.
+// 2. Write a program to check if a number is prime.
 
 function isPrime($num) {
     if ($num <= 1) {
@@ -37,7 +37,21 @@ if (isPrime($number)) {
     echo "$number is not a prime number.";
 }
 
+// 3. Finding Prime Numbers in a Range using isPrime() function above.
 
+function findPrimesInRange($start, $end) {
+    $primes = [];
+    for ($num = $start; $num <= $end; $num++) {
+        if (isPrime($num)) {
+            $primes[] = $num;
+        }
+    }
+    return $primes;
+}
 
-
+// Example Usage
+$start = 2;
+$end = 50;
+$primes = findPrimesInRange($start, $end);
+echo "Prime numbers between $start and $end: " . implode(", ", $primes);
 
